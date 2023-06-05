@@ -72,3 +72,14 @@ carData getCar(int pos)
 {
     return cars[pos];
 }
+
+void initCar(int pos)
+{
+    strcpy(cars[pos].kind, "");
+    strcpy(cars[pos].brand, "");
+    strcpy(cars[pos].model, "");
+    strcpy(cars[pos].color, "");
+    strcpy(cars[pos].transmission, "");
+    strcpy(cars[pos].year, "");
+    cars[pos].price = 0;
+}
