@@ -123,3 +123,16 @@ void saveCustomers()
     fwrite(customers, sizeof(customerData), lastRecord, customerRegister);
     fclose(customerRegister);
 }
+
+void readCustomers()
+{
+    customerRegister = fopen("records.txt", "rb");
+    if (customerRegister == NULL)
+    {
+        return;
+    }
+    lastRecord = getLastRecord(customerRegister);
+    fread(customers, sizeof(customerData), MAX, customerRegister);
+
+    fclose(customerRegister);
+}
