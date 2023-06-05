@@ -54,3 +54,8 @@ void showCustomer(int pos)
     cout << "|" << cars[pos].id << "|" << cars[pos].kind << "|" << cars[pos].brand << "|" << cars[pos].model << "|" << cars[pos].color << "|" << cars[pos].transmission << "|" << cars[pos].year << "|" << cars[pos].price << "|\n\n\n";
     cout << "_______________________________________________________________________________________________________________" << endl;
 }
+
+customerData getCustomer(int pos)
+{
+    return customers[pos];
+}
