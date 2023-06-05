@@ -31,3 +31,10 @@ FILE *customerRegister;
 void saveCustomers();
 void readCustomers();
 int getLastRecord(FILE *file);
+
+void addCustomer(customerData customer)
+{
+    customer.id = lastRecord + 1;
+    customers[lastRecord] = customer;
+    lastRecord++;
+}
