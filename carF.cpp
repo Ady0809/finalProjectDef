@@ -55,3 +55,15 @@ void showCar(int pos)
     cout << "|" << cars[pos].id << "|" << cars[pos].kind << "|" << cars[pos].brand << "|" << cars[pos].model << "|" << cars[pos].color << "|" << cars[pos].transmission << "|" << cars[pos].year << "|" << cars[pos].price << "|\n\n\n";
 }
 
+void showCars()
+{
+    if (lastCar == -1)
+    {
+        cout << "No records available" << endl;
+        return;
+    }
+    for (int i = 0; i < lastCar; i++)
+    {
+        showCar(i);
+    }
+}
