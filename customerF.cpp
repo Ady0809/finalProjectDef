@@ -136,3 +136,16 @@ void readCustomers()
 
     fclose(customerRegister);
 }
+
+int getLastRecord(FILE *file)
+{
+    int tam_archivo, num_clientes;
+    // Obtener el tamaño del archivo
+    fseek(file, 0, SEEK_END);
+    tam_archivo = ftell(file);
+    rewind(file);
+
+    // Calcular el número de alumnos
+    num_clientes = tam_archivo / sizeof(customerData);
+    return num_clientes;
+}
