@@ -67,3 +67,8 @@ void showCars()
         showCar(i);
     }
 }
+
+carData getCar(int pos)
+{
+    return cars[pos];
+}
