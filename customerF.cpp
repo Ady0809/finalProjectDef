@@ -86,3 +86,8 @@ void showCustomers()
         showCustomer(i);
     }
 }
+
+void editCustomer(customerData customer, int pos)
+{
+    customers[pos] = customer;
+}
