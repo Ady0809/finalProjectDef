@@ -106,3 +106,13 @@ void deleteCustomer(int pos)
     lastRecord--;
     initCustomer(lastRecord);
 }
+
+void initCustomer(int pos)
+{
+    customers[pos].id = 0;
+    strcpy(customers[pos].name, "");
+    strcpy(customers[pos].lastName, "");
+    strcpy(customers[pos].address, "");
+    strcpy(customers[pos].email, "");
+    strcpy(customers[pos].cellPhoneNumber, "");
+}
