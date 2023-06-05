@@ -116,3 +116,10 @@ void initCustomer(int pos)
     strcpy(customers[pos].email, "");
     strcpy(customers[pos].cellPhoneNumber, "");
 }
+
+void saveCustomers()
+{
+    customerRegister = fopen("records.txt", "wb");
+    fwrite(customers, sizeof(customerData), lastRecord, customerRegister);
+    fclose(customerRegister);
+}
