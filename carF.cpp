@@ -31,3 +31,17 @@ void addCar(carData car)
     cars[lastCar] = car;
     lastCar++;
 }
+
+int carExists(int id)
+{
+    int pos = -1;
+    for (int i = 0; i < lastCar; i++)
+    {
+        if (id == cars[i].id)
+        {
+            pos = i;
+            break;
+        }
+    }
+    return pos;
+}
