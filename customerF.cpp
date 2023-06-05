@@ -73,3 +73,16 @@ int customerExists(int id)
     }
     return pos;
 }
+
+void showCustomers()
+{
+    if (lastRecord == -1)
+    {
+        cout << "No records available" << endl;
+        return;
+    }
+    for (int i = 0; i < lastRecord; i++)
+    {
+        showCustomer(i);
+    }
+}
