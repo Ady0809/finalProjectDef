@@ -14,3 +14,15 @@ typedef struct{
     char cellPhoneNumber[15];
     carData car;
 }customerData;
+
+customerData customers[MAX];
+int lastRecord = 0;
+
+void addCustomer(customerData customer);
+void showCustomer(int pos);
+int customerExists(int id);
+void showCustomers();
+customerData getCustomer(int pos);
+void initCustomer(int pos);
+void editCustomer(customerData customer, int pos);
+void deleteCustomer(int pos);
