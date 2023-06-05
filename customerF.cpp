@@ -59,3 +59,17 @@ customerData getCustomer(int pos)
 {
     return customers[pos];
 }
+
+int customerExists(int id)
+{
+    int pos = -1;
+    for (int i = 0; i < lastRecord; i++)
+    {
+        if ((id == customers[i].id))
+        {
+            pos = i;
+            break;
+        }
+    }
+    return pos;
+}
