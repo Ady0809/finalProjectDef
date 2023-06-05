@@ -25,3 +25,9 @@ void showCar(int pos);
 void showCars();
 void initCar();
 carData getCar(int pos);
+
+void addCar(carData car)
+{  
+    cars[lastCar] = car;
+    lastCar++;
+}
