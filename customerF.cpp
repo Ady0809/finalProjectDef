@@ -91,3 +91,18 @@ void editCustomer(customerData customer, int pos)
 {
     customers[pos] = customer;
 }
+
+void deleteCustomer(int pos)
+{
+    if (pos == lastRecord || pos < 0)
+    {
+        cout << "No records available" << endl;
+        return;
+    }
+    for (int i = pos; i < lastRecord; i++)
+    {
+        customers[i] = customers[i + 1];
+    }
+    lastRecord--;
+    initCustomer(lastRecord);
+}
