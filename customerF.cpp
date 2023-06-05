@@ -26,3 +26,8 @@ customerData getCustomer(int pos);
 void initCustomer(int pos);
 void editCustomer(customerData customer, int pos);
 void deleteCustomer(int pos);
+
+FILE *customerRegister;
+void saveCustomers();
+void readCustomers();
+int getLastRecord(FILE *file);
