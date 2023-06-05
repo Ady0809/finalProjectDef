@@ -16,3 +16,12 @@ typedef struct
     float price;
 } carData;
 
+carData cars[MAX];
+int lastCar = 0;
+
+void addCar(carData car);
+int carExists(int id);
+void showCar(int pos);
+void showCars();
+void initCar();
+carData getCar(int pos);
