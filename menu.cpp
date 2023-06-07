@@ -17,7 +17,6 @@ char ans[4];
 customerData customer;
 carData car;
 carData reqCar;
-carData reqCar0;
 customerData reqCustomer;
 
 //Se define la funcion mainMenu que muestra el menu principal
