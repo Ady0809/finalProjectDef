@@ -1,3 +1,4 @@
+// La funcion gotoxy mueve el cursor a las coordenadas (x, y) de la pantalla
 #ifdef _WIN32 // Para Windows
 #include <windows.h>
 void gotoxy(int x, int y) {
