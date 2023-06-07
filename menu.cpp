@@ -183,7 +183,18 @@ void initialize()
 
             pos = customerExists(id);
 
-            deleteCustomer(pos);
+            if(pos == -1){
+                cout<<"Customer not found"<<endl;
+                system("pause");
+                break;
+            }
+
+            else
+            {
+                deleteCustomer(pos);
+                cout << "Customer deleted succesfully!\n"
+                     << endl;
+            }
             break;
 
         case 7:
@@ -374,26 +385,9 @@ void menuCar()
             }
             else
             {
-                cout << "\n\n";
-
-                cout << "Are you sure you want to delete car '" << cars[pos].brand<< " " << cars[pos].model << "'? (y/n): ";
-                cin >> ans;
-                cin.ignore();
-
-                if (ans == "y" || ans == "Y")
-                {
-                    deleteCar(pos);
-                    cout << "Car deleted successfully!\n" << endl;
-                }
-                else if (ans == "n" || ans == "N")
-                {
-                    cout << "Action canceled successfully!\n";
-                }
-                else
-                {
-                    cout << "Unavailable choice. Please try again\n";
-                }
-
+                deleteCar(pos);
+                cout << "Car deleted successfully!\n"
+                     << endl;
                 system("pause");
                 break;
             }
